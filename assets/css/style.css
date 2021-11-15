@@ -1,0 +1,237 @@
+/* color scheme sourced from http://khroma.co/generator/ */
+:root {
+  --main-backgroundlight: lightblue;
+  --highlight: #1c2fe0;
+  --textcolor:#c1cac5;
+  --heliotrope: #128a76;
+  --textdark: black;
+  --textmedium:blue;
+
+}
+
+/* set content highlight color and background */
+::selection {
+  background-color: var(--highlight);
+  color: var(--textdark);
+}
+
+html {
+  /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+  font-size: 70%;
+}
+
+body {
+  /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
+  font-size: 1.75rem;
+  line-height: 1.5;
+  color: var(--textdark);
+  background-color: var(--main-backgroundlight);
+}
+
+h1,
+h2 {
+  margin-bottom: 0.625rem;
+  color: var(--textdark);
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 3rem;
+}
+
+
+picture,  h1 {
+  display: inline-block;
+
+
+}
+
+picture {
+align-items: flex-start;
+margin: 0 1rem;
+}
+
+
+p {
+  margin-bottom: 1rem;
+  color: var(--textdark);
+   text-align: left;
+   width: 100%;
+ 
+}
+
+
+header {
+  width: 100%;
+  margin: 0 2rem;
+  padding: 2.5rem;
+  text-align: left;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1 {
+  padding: 1rem 1.2rem;
+  font-size: 3.5rem;
+}
+
+nav {
+  padding-top: 1px;
+  margin-right: 0px;
+  float: right;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+a {
+  color:var(--textdark);
+  text-decoration:underline ;
+  max-width: 100%;
+}
+
+h2 .page-title {
+  padding: 1rem 1.20rem;
+  font-size: 2rem;
+  text-align: left;
+ }
+
+
+
+main {
+  width: 98%;
+  margin: 2rem auto;
+}
+
+article nav ul li{
+  display: inline-block;
+  margin-left:25px;
+  margin-right:45px;
+  font-weight: bolder;
+  font-style: oblique;
+}
+
+footer {
+  margin: 2.5rem;
+  text-align: center;
+}
+
+/* create our main grid with flexbox, use negative margins to offset the padding on the .project-column class */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+/* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
+.project-column {
+  flex: 1 0 100%;
+  padding: 1.5rem;
+  align-items: center;
+  /* when the screen resizes, make it so our columns don't jump in size */
+  transition: flex-basis 500ms linear;
+  margin-bottom: 1.5rem;
+}
+
+/* make each box project a flexbox column to align and justify content within it */
+.box-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100%;
+  padding: 2rem;
+  color: var(--textcolor);
+
+  /* outline is on the outside of the box instead of inside */
+  outline: 2px dashed var(--highlight);
+  outline-offset: -2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.project-header {
+  /* use position and negative margins to move title of project over the project's outline and create an overlap effect */
+  align-items: center;
+  position: relative;
+  margin: -4rem 0 1.5rem 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--main-backgroundlight); 
+  color: var(--textmedium);
+  border: 2px solid var(--textdark);
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* set an outer and inner drop shadow on the project to create a glowing effect on hover */
+.box-project:hover,
+.box-project:hover .project-header {
+  box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
+}
+
+.box-project img {
+  /* set styles to make it so box wraps in <pre> instead of overflowing */
+  align-items: center;
+  tab-size: 4;
+  padding: 1.2rem 1rem;
+  color: var(--textdark);
+  border-radius: 8px;
+  /* use linear-gradient() function to create a fading background  */
+  background-image: linear-gradient(
+    rgba(104, 102, 236, 0.3) 50%,
+    rgba(232, 102, 236, 0.6) 100%
+  );
+  display: flex;
+
+max-width:600px ;
+max-height: 800px;
+}
+
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+  /* on tablets, set columns to only be 50% of the width and not grow */
+  .project-column {
+     align-items: center;
+    flex: 0 0 50%;
+    max-width: 50%;
+ }
+ img{
+   max-height: 45%;
+   max-width:35%;
+ } 
+}
+ 
+
+
+/* media query for larger screens */
+@media screen and (min-width: 992px) {
+  header {
+    width: 75%;
+    align-items: center;  }
+
+  .project-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+     align-items: center;
+  }
+   img{
+   max-height: 45%;
+   max-width:35%;
+ } 
+}
+
+
+
