@@ -32,66 +32,6 @@ body {
   background-color: var(--main-backgroundlight);
 }
 
-h1,
-h2 {
-  margin-bottom: 0.625rem;
-  color: var(--textdark);
-  font-weight: 700;
-  line-height: 1.1;
-  font-size: 3rem;
-}
-
-
-picture,  h1 {
-  display: inline-block;
-
-
-}
-
-picture {
-align-items: flex-start;
-margin: 0 1rem;
-}
-
-
-p {
-  margin-bottom: 1rem;
-  color: var(--textdark);
-   text-align: left;
-   width: 100%;
- 
-}
-
-
-header {
-  width: 100%;
-  margin: 0 2rem;
-  padding: 2.5rem;
-  text-align: left;
-  font-size: 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-h1 {
-  padding: 1rem 1.2rem;
-  font-size: 3.5rem;
-}
-
-nav {
-  padding-top: 1px;
-  margin-right: 0px;
-  float: right;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
-}
-
-header nav ul {
-  list-style-type: none;
-}
-
-header nav ul li {
-  display: inline-block;
-  margin-left: 5px;
-}
 
 a {
   color:var(--textdark);
@@ -120,10 +60,7 @@ article nav ul li{
   font-style: oblique;
 }
 
-footer {
-  margin: 2.5rem;
-  text-align: center;
-}
+
 
 /* create our main grid with flexbox, use negative margins to offset the padding on the .project-column class */
 .row {
