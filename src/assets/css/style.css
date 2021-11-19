@@ -17,7 +17,7 @@
 
 html {
   /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
-  font-size: 70%;
+  font-size: 100%;
 }
 
 body {
@@ -26,8 +26,8 @@ body {
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
   /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
-  font-size: 1.75rem;
-  line-height: 1.5;
+  font-size: 2.5rem;
+  line-height: 3.5;
   color: var(--textdark);
   background-color: var(--main-backgroundlight);
 }
@@ -40,24 +40,24 @@ a {
 }
 
 h2 .page-title {
-  padding: 1rem 1.20rem;
-  font-size: 2rem;
-  text-align: left;
+  padding: 10rem 12.0rem;
+  font-size: 25rem;
+  text-align: center;
  }
 
+/* main {
+  width: 75%;
+  margin: 40rem auto;
+} */
 
-
-main {
-  width: 98%;
-  margin: 2rem auto;
-}
 
 article nav ul li{
-  display: inline-block;
+  display:inline-block;
   margin-left:25px;
-  margin-right:45px;
+  margin-right:25px;
   font-weight: bolder;
   font-style: oblique;
+  font-size: 1.6rem;
 }
 
 
@@ -65,10 +65,11 @@ article nav ul li{
 /* create our main grid with flexbox, use negative margins to offset the padding on the .project-column class */
 .row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap:nowrap;
   flex-direction: row;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
+  font-size: 2.5rem;
 }
 
 .justify-center {
@@ -77,7 +78,7 @@ article nav ul li{
 
 /* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
 .project-column {
-  flex: 1 0 100%;
+  flex: 2 0 50%;
   padding: 1.5rem;
   align-items: center;
   /* when the screen resizes, make it so our columns don't jump in size */
@@ -90,7 +91,7 @@ article nav ul li{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 100%;
+  min-height: 25%;
   padding: 2rem;
   color: var(--textcolor);
 
@@ -111,30 +112,24 @@ article nav ul li{
   border: 2px solid var(--textdark);
   border-radius: 8px;
   transition: all 0.5s ease-in-out;
+  font-size: 1rem;
+}
+picture {
+  width:900px;
+  height: 1200px;
 }
 
-/* set an outer and inner drop shadow on the project to create a glowing effect on hover */
-.box-project:hover,
-.box-project:hover .project-header {
-  box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
-}
-
-.box-project img {
+.box-project {
   /* set styles to make it so box wraps in <pre> instead of overflowing */
   align-items: center;
   tab-size: 4;
   padding: 1.2rem 1rem;
   color: var(--textdark);
   border-radius: 8px;
-  /* use linear-gradient() function to create a fading background  */
-  background-image: linear-gradient(
-    rgba(104, 102, 236, 0.3) 50%,
-    rgba(232, 102, 236, 0.6) 100%
-  );
   display: flex;
 
-max-width:600px ;
-max-height: 800px;
+  max-width:1000px;
+  max-height: 1200px;
 }
 
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
