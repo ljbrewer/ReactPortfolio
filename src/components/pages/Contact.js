@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div>
       <picture>
-        <img src={lolopic} alt="Picture of Laura"></img>
+        <img src={lolopic} alt="Laura"></img>
       </picture>
       <article id="Contact">
         <h2>Contact Information</h2>

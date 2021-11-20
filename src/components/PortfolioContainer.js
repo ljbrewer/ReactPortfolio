@@ -8,9 +8,10 @@ import Project3 from './pages/Project4';
 import Project4 from './pages/Projecttbd';
 import Project from './pages/Project';
 import Contact from './pages/Contact';
-import lolopic from '../assets/images/lolopic.png'
+import lolopic from '../assets/images/lolopic.png';
 
 import '../assets/css/style.css'
+
 
 export default function PortfolioContainer() {
 
@@ -19,7 +20,7 @@ export default function PortfolioContainer() {
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {
     <picture>
-      <img src={lolopic} alt="Picture of Laura"></img>
+      <img src={lolopic} alt="Laura"></img>
     </picture>
  
 

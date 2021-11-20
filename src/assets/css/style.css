@@ -36,12 +36,13 @@ body {
 a {
   color:var(--textdark);
   text-decoration:underline ;
-  max-width: 100%;
+  max-width: 95%;
+  max-height: 95%;
 }
 
 h2 .page-title {
   padding: 10rem 12.0rem;
-  font-size: 25rem;
+  font-size: 20rem;
   text-align: center;
  }
 
@@ -51,13 +52,14 @@ h2 .page-title {
 } */
 
 
-article nav ul li{
+article nav li{
   display:inline-block;
   margin-left:25px;
   margin-right:25px;
   font-weight: bolder;
   font-style: oblique;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  line-height: 3.0rem;
 }
 
 
@@ -69,7 +71,7 @@ article nav ul li{
   flex-direction: row;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
 }
 
 .justify-center {
@@ -112,12 +114,9 @@ article nav ul li{
   border: 2px solid var(--textdark);
   border-radius: 8px;
   transition: all 0.5s ease-in-out;
-  font-size: 1rem;
+  font-size: 1.60rem;
 }
-picture {
-  width:900px;
-  height: 1200px;
-}
+
 
 .box-project {
   /* set styles to make it so box wraps in <pre> instead of overflowing */
@@ -127,9 +126,12 @@ picture {
   color: var(--textdark);
   border-radius: 8px;
   display: flex;
+}
 
-  max-width:1000px;
-  max-height: 1200px;
+
+.image {
+ max-width: 100%;
+ height: auto;
 }
 
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */

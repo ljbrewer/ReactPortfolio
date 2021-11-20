@@ -5,12 +5,12 @@ export default function Blog() {
   return (
     <div>
       
-      <h1>Under Construction</h1>
-      <section class="row justify-center">
-      <div class="project-column">
-        <figure class="project box-project" class="project5">          
-            <h2 class="project-header">TBD</h2>
-          <div class="project-body">
+      <h2>Under Construction</h2>
+      <section className="row justify-center">
+      <div className="project-column">
+        <figure className="project box-project" >          
+            <h2 className="project-header">TBD</h2>
+          <div className="project-body">
             <p>Under Construction </p>
           </div>
           <picture>
