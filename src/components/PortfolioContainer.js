@@ -8,8 +8,8 @@ import Project3 from './pages/Project4';
 import Project4 from './pages/Projecttbd';
 import Project from './pages/Project';
 import Contact from './pages/Contact';
-import lolopic from '../assets/images/lolopic.png';
-
+import Header from './pages/Header';
+import Footer from './pages/Footer';
 import '../assets/css/style.css'
 
 
@@ -19,16 +19,12 @@ export default function PortfolioContainer() {
 
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {
-    <picture>
-      <img src={lolopic} alt="Laura"></img>
-    </picture>
  
-
-    if (currentPage === 'Home') {
-      return <Home />;
-    }
     if (currentPage === 'About') {
       return <About />;
+    }
+    if (currentPage === 'Home') {
+      return <Home/>;
     }
     if (currentPage === 'Project1') {
       return <Project />;
@@ -51,11 +47,17 @@ export default function PortfolioContainer() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
+    
     <div>
+      <Header />
       {/* We are passing the currentPage from state and the function to update it */}
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* Here we are calling the renderPage method which will return a component  */}
       {renderPage()}
+      <Footer />
+    
+ 
     </div>
+ 
   );
 }

@@ -13,7 +13,7 @@ export default function Blog() {
           <p>This Day Planner is for the current day. You can fill it in with items on your schedule to help keep you on track for your day. If you close the page, when you reopen it the data you entered will still be on the page.
           </p>
         </div>
-            <img src={DayPlanner} alt="picture of DayPlanner" className="image"></img>
+            <img src={DayPlanner} alt="DayPlanner" className="image"></img>
         <p>
         <a href="https://ljbrewer.github.io/DayPlanner/">DayPlanner GitHub Repository</a>
         </p>
