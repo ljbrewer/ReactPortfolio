@@ -1,4 +1,4 @@
-import lolopic from "../../assets/images/me3.png"
+
 
 export default function Header() {
   return (

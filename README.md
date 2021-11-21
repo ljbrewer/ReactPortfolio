@@ -35,23 +35,17 @@ Included are the links to the repositories for each and a picture of the main pa
 --------------------------------------------------------------------------------
 ### Link to GitHub repository 
 
-https://github.com/ljbrewer/homework9
+https://github.com/ljbrewer/ReactPortfolio
 
 --------------------------------------------------------------------------------
 ### picture of page:
 
-![image of Readme.md creation process](./assets/images/readmecreation.png)
+![image of Readme.md creation process](src/assets/images/reactportfolio.jpg)
 
 -------------------------------------------------------------------------------
-#### Features of this program:
+### Link to Application
 
-It runs from the command line and it prompts the user to answer questions about the readme file they need created.
-
--------------------------------------------------------------------------------
-#### Tests: 
-
-I tested it by running it from the command line many times.
-
+TBD
 --------------------------------------------------------------------------------
 #### Credits: 
 
